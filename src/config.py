@@ -3,14 +3,14 @@ from pathlib import Path
 
 BASE_DIR  = Path(__file__).resolve().parent.parent
 
-DATA_FAKE = BASE_DIR / "src/data/raw/Fake.csv"
-DATA_TRUE = BASE_DIR / "src/data/raw/True.csv"
+DATA_FAKE = BASE_DIR / "data/raw/Fake.csv"
+DATA_TRUE = BASE_DIR / "data/raw/True.csv"
 
 # print(DATA_FAKE)
 
 
-MODELS_DIR = BASE_DIR / 'src/models'
-REPORTS_DIR = BASE_DIR/ 'src/reports'
+MODELS_DIR = BASE_DIR / '/models'
+REPORTS_DIR = BASE_DIR/ '/reports'
 
 
 SEED = 1234 

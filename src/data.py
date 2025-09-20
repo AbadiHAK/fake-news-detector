@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from pathlib import Path
-from .config import (DATA_FAKE , DATA_TRUE , TEST_SIZE , VAL_SIZE, SEED)
+from src.config import DATA_FAKE , DATA_TRUE , TEST_SIZE , VAL_SIZE, SEED
 
 
 def load_dataset():
@@ -19,6 +19,6 @@ def load_dataset():
 
 
 def split_dataset(df):
-    train_df, test_df = train_test_split(df, test_size=TEST_SIZE , stratify=df[:"label"], random_state=SEED )
-    train_df, val_df = train_test_split(train_df, test_size= VAL_SIZE , stratify=train_df["labels"], random_state=SEED)
+    train_df, test_df = train_test_split(df, test_size=TEST_SIZE , stratify=df["label"], random_state=SEED )
+    train_df, val_df = train_test_split(train_df, test_size= VAL_SIZE , stratify=train_df["label"], random_state=SEED)
     return train_df , test_df , val_df
